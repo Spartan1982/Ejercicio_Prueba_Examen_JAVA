@@ -4,8 +4,15 @@ public class Vehiculo {
 
 	//Atributos
 	long id;
+	public Vehiculo(long id, String fechaMatriculacion, String matricula) {
+		super();
+		this.id = id;
+		FechaMatriculacion = fechaMatriculacion;
+		Matricula = matricula;
+	}
 	String FechaMatriculacion;
 	String Matricula;
+	
 	
 	
 	//Getter y Setters

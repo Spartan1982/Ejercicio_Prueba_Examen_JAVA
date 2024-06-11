@@ -5,6 +5,13 @@ public class Propietario {
 	
 	//Atributos
 	long id;
+	public Propietario(long id, String dni, String fechaCompra, String matricula) {
+		super();
+		this.id = id;
+		Dni = dni;
+		FechaCompra = fechaCompra;
+		Matricula = matricula;
+	}
 	String Dni;
 	String FechaCompra;
 	String Matricula;

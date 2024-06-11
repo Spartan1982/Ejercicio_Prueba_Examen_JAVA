@@ -1,8 +1,12 @@
 package controladores;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
 public class Inicio {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 
 		/**
 		 * comentar todo
@@ -10,7 +14,7 @@ public class Inicio {
 		*-Menu ciclico,  interfaz e implementacion, -Operativa fichero, -Resto
 		*
 		*
-		*Realiza una clase inicial de datos, de vehiculos desde un fichero. Se crea el fichero con el nombre "vehiculosYpropietarios.txt"
+		*Realiza una carga inicial de datos, de vehiculos y propietarios desde un fichero. Se crea el fichero con el nombre "vehiculosYpropietarios.txt"
 		*
 		*con 2 dtos. Vehiculo y propietario
 		*
@@ -28,7 +32,16 @@ public class Inicio {
 		* 
 		* fichero: abrir fichero, bucle(linea no nula) lectura en array, guardar en lista string,
 		*  bucle (lista/array string), split (caracter), new DTO, lista.add()
+		*  
 		* **/
+		
+		
+		String rutaFichero= "C:\\Users\\Jaime\\eclipse-workspace\\Ejercicio_Practica_Examen\\vehiculosYpropietarios.txt";
+		
+		FileReader carga = new FileReader (rutaFichero);
+		BufferedReader carga1 = new BufferedReader(carga);
+		
+		
 	}
 
 }
