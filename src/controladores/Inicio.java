@@ -3,10 +3,15 @@ package controladores;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import dtos.Vehiculo;
 
 public class Inicio {
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static <Propietario> void main(String[] args) throws FileNotFoundException {
 
 		/**
 		 * comentar todo
@@ -38,9 +43,25 @@ public class Inicio {
 		
 		String rutaFichero= "C:\\Users\\Jaime\\eclipse-workspace\\Ejercicio_Practica_Examen\\vehiculosYpropietarios.txt";
 		
+		List<Propietario> propietarios = new ArrayList<>();
+		List<Vehiculo> vehiculos = new ArrayList<>();
+		try {
 		FileReader carga = new FileReader (rutaFichero);
 		BufferedReader carga1 = new BufferedReader(carga);
 		
+		String linea;
+		while ((linea = carga1.readLine()) !=null) {
+			
+			System.out.println(linea);
+			
+		}
+		
+		
+			
+		}catch(IOException e) {
+			System.out.println("Ocurrió un error al leer el archivo: " + e.getMessage());
+            e.printStackTrace();
+		}
 		
 	}
 
